@@ -40,10 +40,6 @@ def main():
         f.write("};\n\n#define NumberOfElements " + str(len(ipv4_array)) + "\n\n")
         f.write(open('deobfuscation_template.c').read())
 
-    print("\nTo compile the generated C file for 64-bit Windows, use:\n")
-#    print("x86_64-w64-mingw32-gcc -o output.exe "+ args.output +" -m64 -lws2_32")
-    print("x86_64-w64-mingw32-gcc -o output.exe "+ args.output +" -m64 -lws2_32 -Wno-int-conversion -fno-stack-protector -fno-pie -nostdlib")
-
 if __name__ == "__main__":
     main()
 
